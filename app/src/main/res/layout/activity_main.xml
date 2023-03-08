@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/bluegradback">
+    android:background="@drawable/backgroundbl">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="270dp"
             android:layout_height="260dp"
-            android:src="@drawable/ah_tech"
+            android:src="@drawable/currency_tr"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/logo"
@@ -31,14 +31,14 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/firstlinear"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:background="#30ffffff"
+        android:background="@drawable/edit_radius"
         android:autofillHints="currency"
 
         android:padding="10dp" />
@@ -54,13 +54,15 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:background="#30ffffff"
+        android:background="@drawable/edit_radius"
         android:drawableLeft="@drawable/baseline_currency_exchange_24"
         android:drawablePadding="20dp"
         android:hint="exchange"
         android:padding="15dp"
         android:textColorHint="@color/white"
         android:inputType="number"
+
+
 
         />
 
@@ -71,7 +73,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/secondlinearedittext"
         android:layout_below="@id/ammounttext"
-       android:padding="10dp"
+       android:padding="12dp"
         android:orientation="horizontal">
 
 
@@ -80,7 +82,7 @@
             android:layout_height="50dp"
             android:id="@+id/firstedittext"
             android:layout_marginLeft="3dp"
-            android:background="#30ffffff"
+            android:background="@drawable/edit_radius"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:editable="false"
@@ -91,26 +93,32 @@
             android:layout_height="50dp"
             android:id="@+id/secondedittext"
 
-            android:background="#30ffffff"
+            android:background="@drawable/edit_radius"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:editable="false"
 
+
             />
 
 
+
     </LinearLayout>
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/exchangebtn"
         android:layout_below="@id/secondlinearedittext"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
+
         android:text="CONVERT"
-        android:backgroundTint="#1A7DA8"
-        />
+        app:cornerRadius="10dp"
+
+
+        android:backgroundTint="#03A9F4"/>
 
 
 
