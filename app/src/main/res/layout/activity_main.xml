@@ -36,12 +36,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:background="#30ffffff"
         android:autofillHints="currency"
 
-        android:padding="20dp" />
+        android:padding="10dp" />
 
 
     <EditText
@@ -55,56 +55,61 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/useri"
+        android:drawableLeft="@drawable/baseline_currency_exchange_24"
         android:drawablePadding="20dp"
         android:hint="exchange"
-        android:padding="10dp"
-        android:textColorHint="@color/white" />
+        android:padding="15dp"
+        android:textColorHint="@color/white"
+        android:inputType="number"
 
-          <LinearLayout
+        />
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:id="@+id/linearlayout"
-        android:layout_marginTop="20dp"
+        android:id="@+id/secondlinearedittext"
         android:layout_below="@id/ammounttext"
-        >
+       android:padding="10dp"
+        android:orientation="horizontal">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/firsttextview"
-
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/white"
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:id="@+id/firstedittext"
+            android:layout_marginLeft="3dp"
+            android:background="#30ffffff"
             android:textStyle="bold"
+            android:layout_gravity="center"
+            android:editable="false"
 
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/secondtextview"
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:id="@+id/secondedittext"
 
-            android:layout_marginLeft="220dp"
-            android:textColor="@color/white"
+            android:background="#30ffffff"
+            android:layout_marginLeft="20dp"
             android:textStyle="bold"
-
-
+            android:layout_gravity="center"
+            android:editable="false"
 
             />
+
 
     </LinearLayout>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/exchangebtn"
-        android:layout_below="@id/linearlayout"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/secondlinearedittext"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:text="CONVERT"
-        android:backgroundTint="#94D7F4"
+        android:backgroundTint="#1A7DA8"
         />
 
 

@@ -11,12 +11,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends AppCompatActivity {
 
     Button exchange_button;
-    TextView first_textview,second_textview;
-    EditText ammount_Edittext;
+
+    EditText ammount_Edittext,first_edit_text,second_edit_text;
     Spinner spinner_currency;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -24,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     exchange_button=findViewById(R.id.exchangebtn);
-    first_textview=findViewById(R.id.firsttextview);
-    second_textview=findViewById(R.id.secondtextview);
+
     ammount_Edittext=findViewById(R.id.ammounttext);
     spinner_currency=findViewById(R.id.spinner);
+    first_edit_text=findViewById(R.id.firstedittext);
+    second_edit_text=findViewById(R.id.secondedittext);
 
     String[] from={"USD","EURO","MAD"};
     ArrayAdapter adapter=new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,from);
@@ -45,18 +48,21 @@ public class MainActivity extends AppCompatActivity {
             if(spinner_currency.getSelectedItem().toString()=="USD"){
                 total1=ammount * 10.46;
                 total2=ammount * 0.95;
-                first_textview.setText(total1+"MAD");
-                second_textview.setText(total2+"EURO");
+
+                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" MAD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" EURO");
             }else if(spinner_currency.getSelectedItem().toString()=="MAD"){
                 total1=ammount * 0.096;
                 total2=ammount * 0.091;
-                first_textview.setText(total1+"USD");
-                second_textview.setText(total2+"EURO");
+
+                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" USD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" EURO");
             }else{
                 total1=ammount * 1.05;
                 total2=ammount * 11.02;
-                first_textview.setText(total1+"USD");
-                second_textview.setText(total2+"MAD");
+
+                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" USD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" MAD");
             }
 
         }
