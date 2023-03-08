@@ -39,7 +39,7 @@
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:background="@drawable/edit_radius"
-        android:autofillHints="currency"
+
 
         android:padding="10dp" />
 
@@ -86,6 +86,7 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:editable="false"
+            android:paddingLeft="50dp"
 
             />
         <EditText
@@ -98,6 +99,7 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:editable="false"
+            android:paddingLeft="50dp"
 
 
             />
@@ -113,7 +115,7 @@
         android:layout_below="@id/secondlinearedittext"
         android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
-
+        android:textColor="@color/white"
         android:text="CONVERT"
         app:cornerRadius="10dp"
 
